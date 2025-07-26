@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import {
   Card,
@@ -26,7 +27,7 @@ interface Message {
   timestamp: Date;
 }
 
-export default function ReadingPage() {
+function ReadingPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [messages, setMessages] = useState<Message[]>([]);
@@ -180,5 +181,13 @@ export default function ReadingPage() {
         </div>
       </ScrollArea>
     </div>
+  );
+}
+
+export default function Page() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ReadingPage />
+    </Suspense>
   );
 }
