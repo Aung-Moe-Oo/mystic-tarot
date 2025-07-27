@@ -40,7 +40,7 @@ export const TarotDeck = ({ onCardSelect, question }: TarotDeckProps) => {
   };
 
   return (
-    <div className="flex flex-col items-center space-y-6 p-6">
+    <div className="flex flex-col items-center space-y-6">
       <div className="text-center space-y-2">
         <h2 className="text-2xl font-bold text-foreground">Choose Your Card</h2>
         <p className="text-muted-foreground max-w-md">
@@ -56,7 +56,6 @@ export const TarotDeck = ({ onCardSelect, question }: TarotDeckProps) => {
         onClick={shuffleCards}
         disabled={isShuffling || !!selectedCard}
         variant="outline"
-        className="mb-4"
       >
         <Shuffle className="w-4 h-4 mr-2" />
         {isShuffling ? "Shuffling..." : "Shuffle Cards"}
@@ -64,7 +63,7 @@ export const TarotDeck = ({ onCardSelect, question }: TarotDeckProps) => {
 
       <div
         className={cn(
-          "grid grid-cols-6 md:grid-cols-8 lg:grid-cols-11 gap-3 transition-all duration-1000",
+          "pt-4 grid grid-cols-6 md:grid-cols-8 lg:grid-cols-11 gap-3 transition-all duration-1000 overflow-x-scroll",
           isShuffling && "scale-95 opacity-50"
         )}
       >

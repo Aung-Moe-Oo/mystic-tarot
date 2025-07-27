@@ -22,7 +22,7 @@ export const TarotCard = ({
     <div
       className={cn(
         "relative w-24 h-36 cursor-pointer transition-all duration-500 transform-gpu perspective-1000",
-        isHovered && !isFlipped && "scale-110 -translate-y-2",
+        isHovered && !isFlipped && "scale-102 -translate-y-2",
         "animate-fade-in"
       )}
       style={{ animationDelay: `${index * 50}ms` }}
@@ -40,13 +40,13 @@ export const TarotCard = ({
         <div
           className={cn(
             "absolute inset-0 w-full h-full rounded-lg backface-hidden",
-            "bg-gradient-to-br from-purple-600 via-blue-600 to-purple-800",
-            "border-2 border-purple-300/30 shadow-lg",
+            "bg-[url(../../public/tarot/tarot.jpg)] bg-cover bg-center",
+            "border-2 border-blue-300/30 shadow-lg",
             "flex items-center justify-center"
           )}
         >
           <div className="w-16 h-24 bg-gradient-to-br from-gold-300 to-gold-500 rounded opacity-80 flex items-center justify-center">
-            <div className="w-8 h-8 border-2 border-purple-800 rounded-full bg-purple-900/20" />
+            <div className="w-8 h-8 border-2 border-blue-1000 rounded-full bg-blue-900/20" />
           </div>
         </div>
 
@@ -55,7 +55,6 @@ export const TarotCard = ({
           className={cn(
             "absolute inset-0 w-full h-full rounded-lg backface-hidden rotate-y-180",
             "bg-gradient-to-br from-background via-card to-background",
-            "border border-black/10 shadow-lg",
             "p-2 flex flex-col items-center justify-between text-center"
           )}
         >
