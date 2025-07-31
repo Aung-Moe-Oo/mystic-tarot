@@ -54,6 +54,7 @@ function ReadingPage() {
       const response = await fetchData(prompt, type);
 
       if (response) {
+        // console.log(response);
         const reading = response;
 
         const readingMessage: Message = {
