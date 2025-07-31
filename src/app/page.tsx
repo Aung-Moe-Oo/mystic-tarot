@@ -102,64 +102,6 @@ export default function Home() {
             />
           </ScrollArea>
         )}
-
-        {/* {appState === "reading" && (
-          <ScrollArea className="h-full bg-chat-background">
-            <div className="p-6 space-y-6">
-              {selectedCard && (
-                <Card className="mx-auto max-w-md  bg-blue-100 text-blue-900 border border-blue-200">
-                  <CardHeader className="text-center">
-                    <CardTitle className="text-xl">
-                      {selectedCard.name}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="text-center">
-                    <Image
-                      src={selectedCard.img}
-                      alt={selectedCard.name}
-                      width={100}
-                      height={100}
-                      className="mx-auto mb-4"
-                    />
-                    <CardDescription>{selectedCard.meaning}</CardDescription>
-                  </CardContent>
-                </Card>
-              )}
-
-              {messages.map((message) => (
-                <ChatMessage
-                  key={message.id}
-                  message={message.text}
-                  isUser={message.isUser}
-                  timestamp={message.timestamp}
-                />
-              ))}
-
-              {isLoading && (
-                <div className="flex justify-start">
-                  <div className="bg-chat-assistant  border border-black/10 rounded-2xl px-4 py-3 max-w-[80%]">
-                    <div className="flex items-center space-x-2">
-                      <div className="animate-pulse flex space-x-1">
-                        <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce"></div>
-                        <div
-                          className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce"
-                          style={{ animationDelay: "0.1s" }}
-                        ></div>
-                        <div
-                          className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce"
-                          style={{ animationDelay: "0.2s" }}
-                        ></div>
-                      </div>
-                      <span className="text-sm text-muted-foreground">
-                        Reading the cards...
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-          </ScrollArea>
-        )} */}
       </div>
     </div>
   );
