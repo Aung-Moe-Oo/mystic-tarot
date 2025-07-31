@@ -53,8 +53,8 @@ function ReadingPage() {
 
       const response = await fetchData(prompt, type);
 
+      // console.log(response);
       if (response) {
-        // console.log(response);
         const reading = response;
 
         const readingMessage: Message = {
